@@ -3,8 +3,7 @@
 
 
 // 배운 점
-(1) isdigit()은 문자열의 모든 문자가 숫자일 때는 true를,
-    아닐 때는 false를 반환함 
+(1) isdigit()은 문자열의 모든 문자가 숫자일 때는 true를, 아닐 때는 false를 반환함 
 
 def solution(s):
    
