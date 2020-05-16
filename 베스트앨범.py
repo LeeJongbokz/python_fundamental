@@ -20,10 +20,12 @@ def solution(genres, plays):
     // a를 value를 기준으로 내림차순으로 정렬함
     // key=a.get을 하면, a.get은 value이기 때문에
     // value를 기준으로 정렬을 할 수 있음
-    // 혹은 key = lamdba x:x[1]로 key를 적용할 수도 있음  
+    // 딕셔너리의 value를 기준으로 적용하고 싶을 때는
+    // 반드시 a.get을 사용해야 함 
     a_reverse = sorted(a, key=a.get, reverse=True)
  
-    // a_reverse에 있는 key(장르)를 기준으로 
+    // a_reverse에 있는 key(장르)를 기준으로
+    // a_reverse는 딕셔너리이므로, 바로 key를 인자로 적용할 수 있음 
     for key in a_reverse:
         temp = []
  
@@ -32,6 +34,7 @@ def solution(genres, plays):
             if key == genres[i]:
                 // temp 배열에 추가해줌
                 // 이 때, 아래와 같이 2차원 배열을 만들 수 있음 
+                // 이 때, 반드시 plays[i]를 추가해야 함 
                 temp.append((plays[i], i))
         
         // temp_reverse는 temp 배열을 key=lambda x:x[0]을 기준으로
